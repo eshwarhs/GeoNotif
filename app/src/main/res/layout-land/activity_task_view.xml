@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskView">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/taskEditFloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:onClick="onTaskEditFloatingButtonClick"
+        app:backgroundTint="@color/white"
+        app:elevation="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="25dp"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        app:tint="@color/primary" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/taskDeleteFloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:onClick="onTaskDeleteFloatingButtonClick"
+        app:backgroundTint="@color/white"
+        app:elevation="10dp"
+        app:layout_constraintStart_toStartOf="@+id/taskEditFloatingButton"
+        app:layout_constraintTop_toBottomOf="@+id/taskEditFloatingButton"
+        app:maxImageSize="25dp"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        app:tint="@color/primary" />
+
+    <LinearLayout
+        android:id="@+id/MapViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="200dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/MapView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        </org.osmdroid.views.MapView>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/TaskDescriptionCardView"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="-20dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginBottom="35dp"
+            android:fillViewport="true"
+            android:scrollbarSize="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TaskTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:lineSpacingExtra="5dp"
+                    android:text="Task title"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/TaskDetailsDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:lineSpacingExtra="5dp"
+                    android:text="Task description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non facilisis lectus."
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/TaskDetailsLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="📍 Task location"
+                    android:textColor="@color/primary_text" />
+
+                <Button
+                    android:id="@+id/TaskDetailsCompleteButton"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:backgroundTint="@color/primary"
+                    android:onClick="onTaskMarkCompleteButtonClick"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Mark complete"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:cornerRadius="5dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

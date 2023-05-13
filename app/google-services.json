@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1080216177339",
+    "firebase_url": "https://geonotif-72f4f-default-rtdb.firebaseio.com",
+    "project_id": "geonotif-72f4f",
+    "storage_bucket": "geonotif-72f4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080216177339:android:e0f8473db5ab3313eeb79e",
+        "android_client_info": {
+          "package_name": "edu.northeastern.numadsp23_team20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080216177339-h33uuj6dmnr7rmi1fjvn6ug68phdd9th.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7ZFvvPrsg59mNPe7Bk_OxhMyb7lMcUSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080216177339-h33uuj6dmnr7rmi1fjvn6ug68phdd9th.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

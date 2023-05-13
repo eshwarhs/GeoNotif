@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingTop="20dp"
+    android:paddingRight="15dp"
+    tools:context=".GroupSettingsView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/GroupSettingsHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Group settings"
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/GroupSettingsGroupNameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/GroupSettingsHeading">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/GroupSettingsGroupNameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Group name"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/GroupSettingsGroupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="TextView"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/GroupSettingsEditName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:enabled="true"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="onAddTaskFindLocationButtonClick"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_highlight"
+                android:textSize="12sp"
+                app:cornerRadius="5dp"
+                app:rippleColor="@color/button_ripple"
+                app:strokeColor="@color/primary_highlight"
+                app:strokeWidth="0.5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/GroupSettingsParticipantsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Group participants"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/GroupSettingsGroupNameContainer" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/GroupSettingsParticipantsCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="2dp"
+            android:padding="5dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GroupSettingsParticipantsLabel">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/GroupSettingsParticipantsRecyclerViewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:backgroundTint="@color/white"
+                android:backgroundTintMode="src_in"
+                android:visibility="visible" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/GroupSettingsAddParticipants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/white"
+            android:enabled="true"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="onAddTaskFindLocationButtonClick"
+            android:text="Add members"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_highlight"
+            android:textSize="12sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GroupSettingsParticipantsCardView"
+            app:rippleColor="@color/button_ripple"
+            app:strokeColor="@color/primary_highlight"
+            app:strokeWidth="0.5dp" />
+
+        <Button
+            android:id="@+id/GroupSettingsLeaveButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="@color/primary"
+            android:onClick="onTaskMarkCompleteButtonClick"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Leave group"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GroupSettingsAddParticipants" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
