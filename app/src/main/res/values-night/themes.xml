@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.NUMADSp23_Team20" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.GeoNotif" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary_highlight</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>

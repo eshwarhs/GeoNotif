@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "edu.northeastern.numadsp23_team20",
+  "applicationId": "com.geonotif.geonotif",
   "variantName": "release",
   "elements": [
     {
