@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static final int SPLASH_TIMEOUT = 500; // Splash screen duration in milliseconds
+    private static final int SPLASH_TIMEOUT = 5000; // Splash screen duration in milliseconds
     private FirebaseAuth mAuth;
 
 
