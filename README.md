@@ -1,7 +1,5 @@
 # GeoNotif
 
-## Description
-
 <img align="right" width="220" src="./app/src/main/res/drawable-xxhdpi/geonotif.png" alt="GeoNotif Logo" />
 
 GeoNotif is a location-based task manager application using which users can add tasks they need to do at particular geographical locations. 
@@ -21,11 +19,10 @@ GeoNotif rewards users for items they check off their lists by providing the lim
 ### Screenshots
 
 <p>
-<img src="screenshots/plaid_demo.gif" width="15%" align="right" hspace="20">
-<img src="metadata/en-US/images/phoneScreenshots/1.png" width="15%" />
-<img src="metadata/en-US/images/phoneScreenshots/2.png" width="15%" />
-<img src="metadata/en-US/images/phoneScreenshots/3.png" width="15%" />
-<img src="metadata/en-US/images/phoneScreenshots/4.png" width="15%" />
-<img src="metadata/en-US/images/phoneScreenshots/5.png" width="15%" />
-<img src="metadata/en-US/images/phoneScreenshots/6.png" width="15%" />
+<img src="screenshots/1.png" width="15%" />
+<img src="screenshots/2.png" width="15%" />
+<img src="screenshots/3.png" width="15%" />
+<img src="screenshots/4.png" width="15%" />
+<img src="screenshots/5.png" width="15%" />
+<img src="screenshots/6.png" width="15%" />
 </p>
